@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Bloom?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="543.0" prefWidth="495.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="com.example.alitalhakamat211030029.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <AnchorPane prefHeight="508.0" prefWidth="455.0" style="-fx-background-color: #ff8282; -fx-border-radius: 30 30 30;">
+         <children>
+            <Label layoutX="39.0" layoutY="26.0" style="-fx-background-color: #ffff;" text="Seyahat Bilgi Girişi">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtAdSoyad" layoutX="19.0" layoutY="57.0" prefHeight="32.0" prefWidth="175.0" promptText="Ad Soyadı Girin" style="-fx-background-color: #ffe2e2; -fx-border-color: #ffaaaa; -fx-text-color: #ffaaaa; -fx-font-size: 14;" />
+            <TextField fx:id="txtBiletNo" layoutX="19.0" layoutY="93.0" prefHeight="25.0" prefWidth="175.0" promptText="Bilet Numarasını Girin" style="-fx-background-color: #ffe2e2; -fx-border-color: #ffaaaa; -fx-text-color: #ffaaaa; -fx-font-size: 14;" />
+            <ComboBox fx:id="cmbKalkis" layoutX="19.0" layoutY="128.0" prefHeight="25.0" prefWidth="175.0" promptText="Kalkış Noktası" style="-fx-background-color: #ffe2e2; -fx-border-color: #ffaaaa; -fx-text-color: #ffaaaa; -fx-font-size: 14;" />
+            <ComboBox fx:id="cmbVaris" layoutX="19.0" layoutY="163.0" prefHeight="25.0" prefWidth="175.0" promptText="Varış Noktası" style="-fx-background-color: #ffe2e2; -fx-border-color: #ffaaaa; -fx-text-color: #ffaaaa; -fx-font-size: 14;" />
+            <Label layoutX="19.0" layoutY="204.0" text="Rezervasyon Adedi:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Spinner fx:id="spnAdet" layoutX="17.0" layoutY="228.0" prefHeight="32.0" prefWidth="175.0" style="-fx-background-color: #ffe2e2; -fx-border-color: #ffaaaa; -fx-text-color: #ffaaaa; -fx-font-size: 14;" />
+            <DatePicker fx:id="dtpSeyahatTarihi" layoutX="17.0" layoutY="276.0" prefHeight="32.0" prefWidth="175.0" promptText="Seyahat Tarihi" style="-fx-background-color: #ffe2e2; -fx-border-color: #ffaaaa; -fx-text-color: #ffaaaa; -fx-font-size: 14;" />
+            <ComboBox fx:id="cmbOtobus" layoutX="17.0" layoutY="324.0" prefHeight="32.0" prefWidth="175.0" promptText="Otobsü Türü Seçiniz" style="-fx-background-color: #ffe2e2; -fx-border-color: #ffaaaa; -fx-text-color: #ffaaaa; -fx-font-size: 14;" />
+            <Button layoutX="11.0" layoutY="390.0" mnemonicParsing="false" onAction="#seyahatKayit" prefHeight="55.0" prefWidth="191.0" style="-fx-background-color: #239c9c; -fx-background-radius: 30 30 30; -fx-text-fill: #fff;" text="Seyahat Kaydet">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <effect>
+                  <Bloom threshold="1.0">
+                     <input>
+                        <Bloom threshold="0.99" />
+                     </input>
+                  </Bloom>
+               </effect>
+            </Button>
+            <Button layoutX="228.0" layoutY="390.0" mnemonicParsing="false" onAction="#seyahatSil" prefHeight="55.0" prefWidth="198.0" style="-fx-background-color: #239c9c; -fx-background-radius: 30 30 30; -fx-text-fill: #fff;" text="Seyahat Sil">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <effect>
+                  <Bloom threshold="1.0">
+                     <input>
+                        <Bloom threshold="0.99" />
+                     </input>
+                  </Bloom>
+               </effect>
+            </Button>
+            <Label layoutX="238.0" layoutY="26.0" prefHeight="21.0" prefWidth="198.0" style="-fx-background-color: #ffff;" text="Seyahat Bilgi Görüntüleme">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="cmbYolcuSecimi" layoutX="249.0" layoutY="57.0" onAction="#yolcuGoster" prefHeight="32.0" prefWidth="175.0" promptText="Yolcu Seçiniz" style="-fx-background-color: #ffe2e2; -fx-border-color: #ffaaaa; -fx-text-color: #ffaaaa; -fx-font-size: 14;" />
+            <TextField fx:id="txtBiletGoster" editable="false" layoutX="249.0" layoutY="93.0" prefHeight="32.0" prefWidth="175.0" promptText="Bilet numarası" style="-fx-background-color: #ffe2e2; -fx-border-color: #ffaaaa; -fx-text-color: #ffaaaa; -fx-font-size: 14;" />
+            <TextField fx:id="txtKalkis" editable="false" layoutX="249.0" layoutY="128.0" prefHeight="32.0" prefWidth="175.0" promptText="Kalkış noktası" style="-fx-background-color: #ffe2e2; -fx-border-color: #ffaaaa; -fx-text-color: #ffaaaa; -fx-font-size: 14;" />
+            <TextField fx:id="txtVaris" editable="false" layoutX="249.0" layoutY="163.0" prefHeight="25.0" prefWidth="175.0" promptText="Varış noktası" style="-fx-background-color: #ffe2e2; -fx-border-color: #ffaaaa; -fx-text-color: #ffaaaa; -fx-font-size: 14;" />
+            <TextField fx:id="txtAdet" editable="false" layoutX="249.0" layoutY="228.0" prefHeight="25.0" prefWidth="175.0" promptText="Rezervasyon adedi" style="-fx-background-color: #ffe2e2; -fx-border-color: #ffaaaa; -fx-text-color: #ffaaaa; -fx-font-size: 14;" />
+            <TextField fx:id="txtSeyahatTarihi" editable="false" layoutX="249.0" layoutY="276.0" prefHeight="32.0" prefWidth="175.0" promptText="Seyahat tarihi" style="-fx-background-color: #ffe2e2; -fx-border-color: #ffaaaa; -fx-text-color: #ffaaaa; -fx-font-size: 14;" />
+            <TextField fx:id="txtOtobus" editable="false" layoutX="249.0" layoutY="324.0" prefHeight="32.0" prefWidth="175.0" promptText="Otobüs türü" style="-fx-background-color: #ffe2e2; -fx-border-color: #ffaaaa; -fx-text-color: #ffaaaa; -fx-font-size: 14;" />
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
